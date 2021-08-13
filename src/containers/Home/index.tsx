@@ -11,20 +11,34 @@ import "aos/dist/aos.css";
 import TextField from '@material-ui/core/TextField';
 import { useState } from "react";
 import Button from "@material-ui/core/Button";
-
+import firebase from "firebase/app";
+import "firebase/database";
+import config from "../../config";
 
 const Home = ()=> {
-
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail]= useState("");
+
+    if (firebase.apps.length === 0) {
+        firebase.initializeApp(config);
+    }
+    const db = firebase.database();
 
     useEffect(()=>{
         Aos.init();
     }, []);
     const clickMe = () =>{
         console.log(firstName, lastName, email);
-        alert("You've Clicked Me");
+        alert("Thank you for registering");
+
+        const betaFormRef = db.ref("betaForm");
+        const newBetaFormRef = betaFormRef.push();
+        newBetaFormRef.set({
+            firstName,
+            lastName, 
+            email,
+        });
 
         setFirstName("");
         setLastName("");
@@ -205,7 +219,7 @@ const Home = ()=> {
                     style={{
                     fontFamily: "Cochin",
                     color: "white"
-                }}> Upload your products with eas, link up your socials and your websites</p>
+                }}> Upload your products with eas, link up your social media accounts and your websites</p>
                 </BoxWrapper>
                 <p     
                 style={{
