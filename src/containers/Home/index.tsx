@@ -240,7 +240,7 @@ const Home = ()=> {
                     fontWeight: 200,
                     textAlign: "center",
                     fontFamily: "Cochin",
-                    marginBottom: "40px" }}> SignUp for our Beta </p>
+                    marginBottom: "60px" }}> SignUp for our Beta </p>
                 <Grid item xs={12} style={{ 
                 display: "flex", 
                 justifyContent: "center", 
