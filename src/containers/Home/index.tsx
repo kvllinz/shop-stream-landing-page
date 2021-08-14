@@ -103,13 +103,6 @@ const Home = ()=> {
                     color: "white"
                 }}>Create an account</p>
                 </BoxWrapper>
-                <p     
-                style={{
-                fontFamily: "Cochin",
-                color: "white",
-                marginTop: "60px"
-                }}>-----------</p>
-
                 <BoxWrapper>
                     <Boxes>
                         <ExploreIcon />
@@ -120,12 +113,6 @@ const Home = ()=> {
                     color: "white"
                 }}> Discover emerging brands and designers instantly</p>
                 </BoxWrapper>
-                <p     
-                style={{
-                fontFamily: "Cochin",
-                color: "white",
-                marginTop: "60px"
-                }}>-----------</p>
                 <BoxWrapper>
                     <Boxes>
                         <ShoppingCartIcon />
@@ -204,16 +191,9 @@ const Home = ()=> {
                     <p     
                     style={{
                     fontFamily: "Cochin",
-                    color: "white"
+                    color: "white",
                 }}>Become a Creator</p>
                 </BoxWrapper>
-                <p     
-                style={{
-                fontFamily: "Cochin",
-                color: "white",
-                marginTop: "60px"
-                }}>-----------</p>
-
                 <BoxWrapper>
                     <Boxes>
                         <ExploreIcon />
@@ -221,15 +201,10 @@ const Home = ()=> {
                     <p     
                     style={{
                     fontFamily: "Cochin",
-                    color: "white"
+                    color: "white",
                 }}> Upload your products with ease, link up your social media accounts and your websites</p>
                 </BoxWrapper>
-                <p     
-                style={{
-                fontFamily: "Cochin",
-                color: "white",
-                marginTop: "60px"
-                }}>-----------</p>
+
                 <BoxWrapper>
                     <Boxes>
                         <ShoppingCartIcon />
@@ -237,7 +212,7 @@ const Home = ()=> {
                     <p     
                     style={{
                     fontFamily: "Cochin",
-                    color: "white"
+                    color: "white",
                 }}>Start selling to a rapidly growing and emerging streetwear audience</p>
                 </BoxWrapper>
                 </BoxContainer>
@@ -338,17 +313,17 @@ const BoxContainer = styled.div`
   height: 200px; 
   margin: 40px 100px 60px; 
   display: flex; 
-  flex-direction: row; 
+  flex-direction: row;
+  align-content: center; 
   justify-content: space-evenly;
+  align-items: space-evenly;
 `;
 const BoxWrapper = styled.div`
   display: flex; 
   flex: 1 1 0%; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
+  flex-direction: column;
+  align-content: space-evenly;
   margin-left: 10px; 
-  text-align: center; 
   margin-right: 10px; 
   min-width: 80px; 
   cursor: auto;
