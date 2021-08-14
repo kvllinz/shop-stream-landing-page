@@ -155,16 +155,20 @@ const Home = ()=> {
                 marginBottom: "60px"
                 }}> Live Shopping</p>
 
+            </Grid>
+
                 <Grid item xs={12} style={{ 
                     display: "flex", 
                     flexDirection: "row", 
                     marginTop: "50px", 
                     marginBottom: "50px", 
+                    alignContent: "space-evenly",
                     justifyContent: "space-evenly"}}>
                 <LocationImage 
                 data-aos="fade-up-right"
                 src={LiveImage} 
-                style={{width: "20%", marginLeft: "100px" }}/>
+                style={{width: "30%",
+                alignContent: "center" }}/>
 
                 <p 
                 data-aos="fade-up-right"    
@@ -175,9 +179,8 @@ const Home = ()=> {
                 marginTop: "60px",
                 textAlign: "center",
                 marginBottom: "60px",
-                marginRight: "200px"
+                alignContent: "center"
                 }}> With shoppable livestreams, you get to interact with your favorite streetwear brands in a new and entertaining way</p>
-        </Grid>
                 </Grid>
 
                 <Grid item xs={12} style={{ marginTop: "120px" }}>
@@ -219,7 +222,7 @@ const Home = ()=> {
                     style={{
                     fontFamily: "Cochin",
                     color: "white"
-                }}> Upload your products with eas, link up your social media accounts and your websites</p>
+                }}> Upload your products with ease, link up your social media accounts and your websites</p>
                 </BoxWrapper>
                 <p     
                 style={{
@@ -235,7 +238,7 @@ const Home = ()=> {
                     style={{
                     fontFamily: "Cochin",
                     color: "white"
-                }}>Start selling to a rapidly growing and engaging streetwear community</p>
+                }}>Start selling to a rapidly growing and emerging streetwear audience</p>
                 </BoxWrapper>
                 </BoxContainer>
 
@@ -255,9 +258,11 @@ const Home = ()=> {
                     textAlign: "center",
                     fontFamily: "Cochin",
                     marginBottom: "60px" }}> SignUp for our Beta </p>
-                <Grid item xs={12} style={{ 
+
+
+                <Grid container style={{ 
                 display: "flex", 
-                justifyContent: "center", 
+                justifyContent: "space-evenly", 
                 flexDirection: "column", 
                 alignItems: "center", 
                 marginBottom: "60px" }}>
@@ -313,6 +318,11 @@ const HomeWrapper = styled(Grid)`
   height: 100%;
   justify-content: center;
   background-color: #000000;
+  && {
+  @media (max-width: 680px){
+      height: 100%
+    }
+  }
  `;
 const LocationContainer = styled.div`
   display: flex;
