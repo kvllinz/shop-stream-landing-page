@@ -154,7 +154,7 @@ const Home = ()=> {
                     alignContent: "space-evenly",
                     justifyContent: "space-evenly"}}>
                 <LocationImage 
-                data-aos="fade-up-right"
+                data-aos="zoom-in" 
                 src={LiveImage} 
                 style={{width: "70%",
                 alignContent: "center" }}/>
