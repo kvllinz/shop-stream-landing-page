@@ -144,7 +144,9 @@ const Home = ()=> {
 
             </Grid>
 
-                <Grid item xs={12} style={{ 
+            <Grid container direction="row">
+
+                <Grid item xs={6} style={{ 
                     display: "flex", 
                     flexDirection: "row", 
                     marginTop: "50px", 
@@ -154,9 +156,17 @@ const Home = ()=> {
                 <LocationImage 
                 data-aos="fade-up-right"
                 src={LiveImage} 
-                style={{width: "30%",
+                style={{width: "70%",
                 alignContent: "center" }}/>
 
+                </Grid>
+            <Grid item xs={6} style={{ 
+                    display: "flex", 
+                    flexDirection: "row", 
+                    marginTop: "50px", 
+                    marginBottom: "50px", 
+                    alignContent: "space-evenly",
+                    justifyContent: "space-evenly"}}>
                 <p 
                 data-aos="fade-up-right"    
                 style={{
@@ -168,6 +178,8 @@ const Home = ()=> {
                 marginBottom: "60px",
                 alignContent: "center"
                 }}> With shoppable livestreams, you get to interact with your favorite streetwear brands in a new and entertaining way</p>
+                </Grid>
+
                 </Grid>
 
                 <Grid item xs={12} style={{ marginTop: "120px" }}>
@@ -309,7 +321,7 @@ const LocationImage = styled.img`
   padding-left: 14px;
   padding-right: 10px;
 `;
-const BoxContainer = styled.div`
+const BoxContainer = styled(Grid)`
   height: 200px; 
   margin: 40px 100px 60px; 
   display: flex; 
